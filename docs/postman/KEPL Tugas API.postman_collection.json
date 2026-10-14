@@ -1,0 +1,187 @@
+{
+  "info": {
+    "_postman_id": "726377db-0857-41f0-bed1-09f4730b0fdb",
+    "name": "KEPL Tugas API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50459729",
+    "_collection_link": "https://go.postman.co/collection/50459729-726377db-0857-41f0-bed1-09f4730b0fdb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\r\n     \"email\": \"admin@example.com\",\r\n     \"password\": \"password\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2 GET tugas",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "GET tugas (URL penuh)",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "3 POST tugas",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\r\n     \"judul\": \"Belajar Postman\",\r\n     \"deskripsi\": \"Uji CRUD lewat Postman\",\r\n     \"selesai\": false\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/tugas",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "tugas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3 POST tugas no Auth",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\r\n     \"judul\": \"Belajar Postman\",\r\n     \"deskripsi\": \"Uji CRUD lewat Postman\",\r\n     \"selesai\": false\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/tugas",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "tugas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4 PUT tugas",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\r\n     \"judul\": \"Belajar Postman (diedit)\",\r\n     \"selesai\": true\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/tugas/6",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "tugas",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5 DELETE tugas",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
