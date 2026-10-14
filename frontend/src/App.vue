@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
     <div class="wrapper">
-      <h1>Evolusi PL</h1>
+      <h1>Evolusi PL - Uji PR</h1>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
